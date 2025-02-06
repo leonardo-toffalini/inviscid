@@ -1,6 +1,6 @@
-#include "raylib.h"
 #include "../include/grid.h"
-#include "resource_dir.h" // utility header for SearchAndSetResourceDir
+#include "../build/external/raylib-master/src/raylib.h"
+#include "../include/resource_dir.h" // utility header for SearchAndSetResourceDir
 
 int main() {
   SetConfigFlags(FLAG_VSYNC_HINT | FLAG_WINDOW_HIGHDPI);
@@ -18,6 +18,7 @@ int main() {
 
     // DrawLine(100, 0, 100, Height, WHITE);
     grid.showGrid();
+    grid.drawCells();
 
     EndDrawing();
   }
