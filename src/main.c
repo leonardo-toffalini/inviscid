@@ -1,5 +1,5 @@
-#include "../include/engine.h"
 #include "../build/external/raylib-master/src/raylib.h"
+#include "../include/engine.h"
 #include "../include/resource_dir.h" // utility header for SearchAndSetResourceDir
 
 int main() {
@@ -15,7 +15,7 @@ int main() {
     BeginDrawing();
     ClearBackground(BLACK);
 
-    DrawLine(100, 0, 100, Height, WHITE);
+    draw_grid(dens, Width, Height);
 
     EndDrawing();
   }
