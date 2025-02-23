@@ -1,4 +1,4 @@
-#include "../include/grid.h"
+#include "../include/engine.h"
 #include "../build/external/raylib-master/src/raylib.h"
 #include "../include/resource_dir.h" // utility header for SearchAndSetResourceDir
 
@@ -10,15 +10,12 @@ int main() {
 
   const int Width = GetScreenWidth();
   const int Height = GetScreenHeight();
-  Grid grid = Grid(10, Width, Height);
 
   while (!WindowShouldClose()) {
     BeginDrawing();
     ClearBackground(BLACK);
 
-    // DrawLine(100, 0, 100, Height, WHITE);
-    grid.showGrid();
-    grid.drawCells();
+    DrawLine(100, 0, 100, Height, WHITE);
 
     EndDrawing();
   }
